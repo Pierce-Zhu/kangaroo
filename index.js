@@ -28,7 +28,7 @@ app.use(
     })
 );
 
-// logger
+// 时间戳
 app.use(async (ctx, next) => {
     const start = new Date();
     await next();
@@ -38,13 +38,12 @@ app.use(async (ctx, next) => {
 
 // controller中间件
 Koa.prototype["controller"] = {};
-controller.forEach(url => {
-    Koa.prototype.controller[url.name] = url.module;
+// console.log('controller', controller);
+controller.forEach((item) => {
+    Koa.prototype.controller[item.name] = item.module;
 });
 
 // routes
-// app.use(index.routes(), index.allowedMethods())
-// app.use(users.routes(), users.allowedMethods())
 app.use(setRouters(app)); //引入router中间件，传递app实例
 
 // error-handling

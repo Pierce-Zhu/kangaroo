@@ -49,13 +49,13 @@ const setRouters = (app) => {
     Object.keys(routers).forEach((key) => {
         const [method, path] = key.split(' ');
         // 不传入service
-        // Router[method](path, routers[key]);
-
-        // 将service作为参数传入，但是使用这种方式以后没有办法在controller进行render   page
-        Router[method](path, (ctx) => {
-            const handler = routers[key];
-            handler(ctx, serviceList);
-        });
+        Router[method](path, routers[key]);
+        console.log('routers[key]>>>>>>', routers[key]);
+        // 将service作为参数传入，但是使用这种方式以后没有办法在controller进行render   page,原因是ctx.render函数结构体被破坏了，最后的几个货号没有了
+        // Router[method](path, (ctx) => {
+        //     const handler = routers[key];
+        //     handler(ctx, serviceList);
+        // });
     });
     return Router.routes()
 }
