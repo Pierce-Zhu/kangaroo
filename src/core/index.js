@@ -49,15 +49,15 @@ class Kangaroo extends koa {
     setRouters() {
         const _setRouters = (app) => {
             const routers = require('../router')(app);
-            const svs = {};
+            const serviceList = {};
             app.loader.loadService().forEach((service) => {
-                svs[service.name] = service.module;
+                serviceList[service.name] = service.module;
             })
             Object.keys(routers).forEach((key) => {
                 const [method, path] = key.split(' ');
                 app.router[method](path, (ctx) => {
                     const handler = routers[key];
-                    handler(ctx, svs);
+                    handler(ctx, serviceList);
                 })
             })
             return app.router.routes()

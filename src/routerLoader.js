@@ -1,3 +1,4 @@
+'use strict';
 //routerLoader.js
 const router = require('koa-router');
 const fs = require('fs');
@@ -51,7 +52,9 @@ const setRouters = (app) => {
         // 不传入service
         Router[method](path, routers[key]);
         console.log('routers[key]>>>>>>', routers[key]);
-        // 将service作为参数传入，但是使用这种方式以后没有办法在controller进行render   page,原因是ctx.render函数结构体被破坏了，最后的几个货号没有了
+        /* 将service作为参数传入，
+        * 但是使用这种方式以后没有办法在controller进行render   page,原因是ctx.render函数结构体被破坏了，最后的几个货号没有了
+        */
         // Router[method](path, (ctx) => {
         //     const handler = routers[key];
         //     handler(ctx, serviceList);
