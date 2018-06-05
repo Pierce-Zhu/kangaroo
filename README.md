@@ -1,6 +1,6 @@
 # kangaroo
 
-## Commit History:
+## Basic Use:
 ```
 git clone https://github.com/Pierce-Zhu/kangaroo.git
 yarn install
