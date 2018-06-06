@@ -1,5 +1,5 @@
 'use strict';
-//routerLoader.js
+
 const router = require('koa-router');
 const fs = require('fs');
 const Router = new router();
