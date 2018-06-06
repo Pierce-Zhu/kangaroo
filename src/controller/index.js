@@ -1,10 +1,11 @@
+const BaseController = require("../core/BaseController");
+
 module.exports = {
-    
-    async getHome(ctx) {
+
+    async getHome(ctx, service) {
 
         // await service.index.home(); // 使用service
         // ctx.body = 'Hello Kangaroo !';
-        console.log('con ctx', ctx.controller);
         await ctx.render('index', {
             title: 'Hello kangaroo !'
         })
@@ -16,3 +17,19 @@ module.exports = {
         })
     }
 }
+
+// class IndexController extends BaseController {
+//     constructor() {}
+//     async getHome(ctx, service) {
+//         await service.index.home(); // 使用service
+//         ctx.body = "Hello Kangaroo !";
+//     }
+
+//     async getString(ctx) {
+//         await ctx.render("user", {
+//             title: "I am a amazing kangaroo~"
+//         });
+//     }
+// }
+
+// module.exports = IndexController

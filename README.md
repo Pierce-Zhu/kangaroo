@@ -9,6 +9,10 @@ npm run start
 open in browser at http://localhost:3001/
 
 ## Commit History:
+
+#### 2018-06-05
+* 新增util文件夾，新增基类BaseController
+
 #### 2018-06-05
 * 更改service加载方式，将service挂在在app上
 * 新增lib文件夹，隐藏启动配置，简化src/index.js文件

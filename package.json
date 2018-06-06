@@ -25,5 +25,11 @@
   "devDependencies": {
     "nodemon": "^1.8.1"
   },
+  "keywords": [
+    "kangaroo",
+    "koa",
+    "framework",
+    "MVC"
+  ],
   "author": "zhusen"
 }

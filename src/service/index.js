@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-    async home(ctx) {
+    async home() {
         console.log('this is home service');
     },
     async getString() {
