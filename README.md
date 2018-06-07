@@ -1,5 +1,5 @@
 # kangaroo
-Kangaroo是一个基于KOA2的Node MVC框架，目前功能还在完善中，叫脚手架可能更全面一些。期待大家的建议。
+Kangaroo是一个基于KOA2的Node MVC框架(脚手架)，目前功能还在完善中。期待大家的建议。
 
 
 
