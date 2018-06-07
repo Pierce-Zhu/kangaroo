@@ -10,7 +10,7 @@ open in browser at http://localhost:3001/
 
 ## Commit History:
 
-#### 2018-06-05
+#### 2018-06-06
 * 新增util文件夾，新增基类BaseController（有待优化）
 * 新增config文件夹
 * 引入Mysql
