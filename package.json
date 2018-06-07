@@ -1,5 +1,5 @@
 {
-  "name": "fst-koa2",
+  "name": "kangaroo",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -31,7 +31,8 @@
     "kangaroo",
     "koa",
     "framework",
-    "MVC"
+    "MVC",
+    "node"
   ],
   "author": "zhusen"
 }

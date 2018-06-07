@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="webkit" name="renderer">
+    <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.staticfile.org/flexslider/2.2.2/flexslider-min.css">
+    <link rel="stylesheet" href="./stylesheets/login.css">
+    <meta name="keywords" content="">
+    <title>Kangaroo-login</title>
+</head>
+
+<body>
+    <div class="main_body text-center">
+        <div class="main_content">
+            <div class="login_title">
+                <h1 class="logo">Kangaroo</h1>
+                <h4 class="title">基于Koa2的Node框架，与世界分享你的Node经验</h4>
+            </div>
+            <div class="" style="height:41px;">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="col-xs-6 no-padding-left no-padding-right <%- locals.type='login'? 'active' : '' %>
+						">
+                        <a href="#login" role="tab" data-toggle="tab">
+                            <span>登录</span>
+                        </a>
+                    </li>
+                    <li role="presentation" class="col-xs-6 no-padding-left no-padding-right <%- locals.type='register'? 'active' : '' %>
+						">
+                        <a href="#register" role="tab" data-toggle="tab">
+                            <span>注册</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content" style="padding:15px 0">
+                    <div role="tabpanel" class="tab-pane <%= type='login' ? 'active' : '' %>
+						" id="login">
+                        <form class="form-horizontal " action="/account/login" method="post">
+                            <div class="input_content">
+                                <div class="form-group input-login">
+                                    <label class="email control-label sr-only">邮箱</label>
+                                    <div classs="col-md-12">
+                                        <input class="form-control input_box" name="email" type="email" placeholder="userEmail" required></input>
+                                    </div>
+                                </div>
+                                <div class="form-group input-login">
+                                    <label class="email control-label sr-only">密码</label>
+                                    <div classs="col-md-12">
+                                        <input class="form-control input_box" type="password" name="password" placeholder="Password" required></input>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group sub_btn">
+                                <button type="submit" class="btn btn-primary btn-login col-md-12">登录</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- <div role="tabpanel" class="tab-pane <%- locals.type='register'? 'active' : '' %>
+						" id="register">
+						<form class="form-horizontal" action="/account/register" method="post">
+							<div class="input_content">
+							    <div class="form-group input-register">
+							        <label  class="control-label sr-only">邮箱</label>
+							        <div class="col-md-12 no-padding-left no-padding-right">
+							            <input type="email" class="form-control input_box" name="email" placeholder="Email" required>
+							        </div>
+							    </div>
+							    <div class="form-group input-register">
+							        <label  class="control-label sr-only">密码</label>
+							        <div class="col-md-12 no-padding-left no-padding-right">
+							            <input type="password" class="form-control input_box" id="pwd_r" name="password" placeholder="请设置6-18位密码" >
+							        </div>
+							    </div>
+							    <div class="form-group input-register">
+							        <label  class="control-label sr-only">重复密码</label>
+							        <div class="col-md-12 no-padding-left no-padding-right">
+							            <input type="password" class="form-control input_box" name="passwordAgain" placeholder="Password Again" required>
+							        </div>
+							    </div>
+							</div>
+						    <div class="form-group sub_btn">
+						        <button type="submit" class="btn btn-primary btn-register col-md-12" >注册</button>
+						    </div>
+						</form>
+					</div> -->
+                    <h5>
+                        <%= locals.error ? locals.error : ''%>
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="./javascripts/login.js"></script>
+    <!-- [if js placeholder] -->
+</body>
+
+</html>
